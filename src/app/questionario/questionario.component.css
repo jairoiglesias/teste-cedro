@@ -1,0 +1,37 @@
+#container{
+    text-align: center;
+    font-family: Calibri;
+    width: 1000px;
+    margin: 0 auto;
+    font-size: 13px;
+}
+
+.question_container{
+    padding: 10px;
+}
+
+.question_container hr{
+    margin-top: 15px;
+}
+
+#select_container{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.selectItem{
+    float:left;
+    margin:5px;
+    width: 380px;
+    height: 125px;
+}
+
+/deep/ .mat-radio-label-content{
+    /* width: 20px !important; */
+    padding: 5px !important;
+}
+
+/deep/ .mat-form-field-infix{
+    width: 300px !important;
+}

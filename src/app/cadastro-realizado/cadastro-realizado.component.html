@@ -1,0 +1,16 @@
+<div id="container">
+
+    <h2>Cadastro Realizado Com Sucesso</h2>
+    <hr>
+    <h3>Respostas do Questionário</h3>
+    
+    <!-- {{respostas | json}} -->
+
+    <div class="resposta_container" *ngFor="let resposta of respostas">
+      <strong>{{resposta.key.replace('_', ' - ')}}</strong><br>
+        <span>{{resposta.value}}</span>
+
+    </div>
+
+
+</div>

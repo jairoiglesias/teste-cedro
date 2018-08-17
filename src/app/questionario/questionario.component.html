@@ -1,0 +1,90 @@
+<div id="container">
+
+  <h1>Perfil do Investidor - Questionário</h1>
+  
+  <form [formGroup]="userForm" (submit)="save()">
+  
+    <div *ngFor="let pergunta of perguntas, let i = index">
+
+      <div class="question_container">
+
+        <h2>{{i+1}} - {{pergunta.title}}</h2>
+    
+        <mat-radio-group formControlName="{{pergunta.name}}">
+    
+          <mat-radio-button *ngFor="let option of pergunta.options" value="{{option}}">{{option}}</mat-radio-button>
+    
+        </mat-radio-group>
+    
+        <hr>
+
+      </div>
+  
+  
+    </div>
+  
+    <h2>4 - Qual sua familiaridade com os tipos de investimentos abaixo?<br>Leve em consideração o valor aplicado nos últimos 2 anos</h2>
+  
+    <div id="select_container">
+      
+      <div class="selectItem">
+        
+        <h3>Titulos de renda fixa ou tesouro direto</h3>
+        <mat-form-field>
+          <mat-select placeholder="Selecione uma opção" formControlName="pergunta4_select1">
+            <mat-option *ngFor="let selectOption of selectOptions" [value]="selectOption">
+              {{selectOption}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="selectItem">
+
+        <h3>Fundos de investimento</h3>
+        <mat-form-field>
+          <mat-select placeholder="Selecione uma opção" formControlName="pergunta4_select2">
+            <mat-option *ngFor="let selectOption of selectOptions" [value]="selectOption">
+              {{selectOption}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+    
+      <div class="selectItem">
+
+        <h2>Ações a Vista</h2>
+        <mat-form-field>
+          <mat-select placeholder="Selecione uma opção" formControlName="pergunta4_select3">
+            <mat-option *ngFor="let selectOption of selectOptions" [value]="selectOption">
+              {{selectOption}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      
+      <div class="selectItem">
+        
+        <h3>Aluguel de Ações</h3>
+        <mat-form-field>
+          <mat-select placeholder="Selecione uma opção" formControlName="pergunta4_select4">
+            <mat-option *ngFor="let selectOption of selectOptions" [value]="selectOption">
+              {{selectOption}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+    </div>
+
+    <div style="clear:both"></div>
+  
+    <div id="grp_button">
+        <button mat-raised-button (click)="voltar()">Voltar</button>
+        <button mat-raised-button [disabled]="!userForm.valid" (click)="salvar()">Salvar</button> 
+    </div>
+    
+    
+  </form>
+</div>

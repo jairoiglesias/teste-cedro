@@ -1,0 +1,13 @@
+#container{
+    margin:0 auto;
+    font-family: Calibri;
+    text-align: center;
+    width: 800px;
+}
+
+.resposta_container{
+    padding: 15px;
+    background-color: #FFE0B2;
+    margin: 10px;
+    border-radius: 6px;
+}
